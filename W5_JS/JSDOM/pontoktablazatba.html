@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <table id="Pontok3Dben" border="1">
+        <thead>
+            <tr>
+                <td colspan="5">Koordinátapontok</td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>X</td>
+                <td>Y</td>
+                <td>Z</td>
+                <td>&nbsp;</td>
+            </tr>
+        </thead>
+        <tfoot>
+
+        </tfoot>
+        <tbody>
+            <tr>
+                <td>A</td>
+                <td>15,256</td>
+                <td>32</td>
+                <td>89</td>
+                <td><a href="www.w3.org">X</a></td>
+            </tr>
+        </tbody>
+    </table>
+    <input type="button" id="dolgozz" value="Dolgozz!">
+    <script type="text/javascript" src="Point3D.js"></script>
+    <script type="text/javascript">
+        'use strict';
+        window.addEventListener('load', Window_Load_Handler, false);
+
+        var pontok = [
+            new Point3D(1, 2, 3),
+            new Point3D(4, 5, 6),
+            new Point3D(7, 8, 9)
+
+        ];
+        pontok.push(new Point3D(10, 11, 12));
+
+
+        function Window_Load_Handler()
+        {
+            console.log('Fuss Forrest, fuss!');
+
+            var nodeButton = document.querySelector('#dolgozz');
+            nodeButton.addEventListener('click', Button_Click_Handler, false);
+
+            var nodeTBody = document.querySelector('#Pontok3Dben TBODY');
+            for (var i=0; i<pontok.length; i++)
+            {
+                var nodeTR = document.createElement('TR');
+                var nodeTD1 = document.createElement ('TD');
+                var nodeTD2 = document.createElement ('TD');
+                var nodeTD3 = document.createElement ('TD');
+                var nodeTD4 = document.createElement ('TD');
+                var nodeTD5 = document.createElement ('TD');
+                nodeTD2.innerText = pontok[i].x;
+                nodeTD3.innerText = pontok[i].y;
+                nodeTD4.innerText = pontok[i].z;
+                nodeTR.appendChild(nodeTD1);
+                nodeTR.appendChild(nodeTD2);
+                nodeTR.appendChild(nodeTD3);
+                nodeTR.appendChild(nodeTD4);
+                nodeTR.appendChild(nodeTD5);
+                nodeTBody.appendChild(nodeTR);
+
+            }
+
+        }
+
+        function Button_Click_Handler ()
+        {
+            alert('megnyomták a gombot');
+        }
+
+    </script>
+</body>
+</html>

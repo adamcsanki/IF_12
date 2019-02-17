@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>saját típus</title>
+</head>
+<body>
+    <h2>Saját típus</h2>
+    <script type="text/javascript">
+        'use strict';
+        //ez a egy konstruktor függvény, ezt lehet majd példáyosítani
+        function Person(height, weight, name, age, gender) 
+        {
+            this.height=height;  //this magára az objektumra hivatkozás
+            this.weight=weight;  //thissel elkerüljük a névütközést   
+            this.name=name;
+            this.age=age;       //Person típusnak legyen age tulaajdonsága
+            this.gender=gender;
+
+            this.weightLoss = function (deltaWeight)
+            {
+                this.weight -= deltaWeight;
+            }
+            this.print = function()
+            {
+                return this.name + '(' + this.age +')';
+            }
+        }
+        var adam = new Person(180, 80, 'Ádám', 27, 1);
+        adam.weightLoss(9);
+        for(var memberName in adam)  // for in ciklus egy objektum tagjainak a nevét felsorolta
+        {
+            if(adam[memberName] instanceof Function)
+            {
+                continue;
+            }                            
+            console.log(memberName, adam[memberName]);//objektum memberjeinek bejárására van, tömbökére nem
+        }
+        alert(adam.print());   
+    </script>
+</body>
+</html>

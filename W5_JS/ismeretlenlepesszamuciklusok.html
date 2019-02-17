@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ismeretlen lépésszámú ciklusok</title>
+</head>
+<body>
+    <h2>Ismeretlen lépésszámú ciklusok</h2>
+    <script type="text/javascript">
+        'use strict';
+        var i=0     //ciklusváltozót cikluson kívül deklaráljuk
+        while(i<10)     //EKŐL TESZTELŐ
+        {
+            console.log(i);
+            i++;
+        }
+
+        i=0;
+
+        do          //HÁTUL TESZTELŐ
+        {
+            console.log(i);
+            i++;
+        }
+        while(i<10);
+
+        /*különbségek szemléltetése*/
+        /*elől tesztelő*/
+        console.warn('szemlélteve a különbségeket');
+        console.warn('elől tesztelő');
+        i=10;            
+        while(i<10)    
+        {
+            console.log(i);
+            i++;
+        }
+
+        i=10;
+
+        /*hátul tesztelő*/
+        console.warn('hátul tesztelő');
+        do         
+        {
+            console.log(i);
+            i++;
+        }
+        while(i<10);
+    </script>
+</body>
+</html>

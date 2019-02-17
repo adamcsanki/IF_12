@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Táblázatos</title>
+</head>
+<body>
+    <nav>
+        <a href="cimsorok.html">Címsorok</a>
+        <a href="listak.html">Listák</a>
+        <a href="self-close elements.html">Self-close elements</a>
+        <a href="../hetfo/valami.html">Első HTML fájlom</a>
+        <a href="tables.html">Táblázatos</a>
+        <a href="http://www.w3schools.com">W3Schools</a>
+    </nav>
+    <h2>Táblázatos adatmegjelenítés</h2>
+    <table border="1" cellspacing="0">  <!-- definiálás sorrendje kötött: thead, tfoot, tbody -->
+        <thead>
+            <tr>
+                <td rowspan="2"></td>   <!-- rowspan sorokat von össze-->
+                <th colspan="2">A</th>  <!-- th element feélkövérré teszi és középre igazítja-->
+                <th colspan="2">B</th>
+            </tr>
+            <tr>
+                <th>x</th>
+                <th>y</th>
+                <th>x</th>
+                <th>y</th>
+            </tr>
+            </tr>
+                        
+            
+        </thead>
+        <tfoot>
+            <td colspan="5">&copy; IF-12</td>
+        </tfoot>
+        <tbody>
+             <tr>
+                <th>I.</th>
+                <td>1111</td>
+                <td>2222</td>
+                <td>3333</td>
+                <td>4444</td>
+            </tr>
+            <tr>
+                <th>II.</th>
+                <td>11.11</td>
+                <td>22.22</td>
+                <td>33.33</td>
+                <td>44.44</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

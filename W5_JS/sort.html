@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sorrendezés</title>
+</head>
+<body>
+    <h2>Sort</h2> 
+    <script type="text/javascript">
+    'use strict';
+    function AscNumbers(a, b)  //számok növekvő sorrendbe rendezésének függvénye
+    {
+        return a-b;
+    };
+    function DescNumbers(a, b)  //számok csökkenő sorrendbe rendezésének függvénye
+    {
+        return -1*(a-b);
+    };
+    function DescStrings(s1, s2)  //stringek csökkenő sorrendbe rendezése
+    {
+        var result;
+        if(s1==s2)
+        {
+            result=0;
+        }
+        else if(s1<s2)
+        {
+            result=1;
+        }
+        else
+        {
+            result=-1;
+        }
+        return result;
+    }
+    var arrStrings = ['kivi', 'mango', 'banana', 'pear', 'cat', 'bear', 'bean'];
+    var arrNumbers = [3, 9, 6, 5, 4, 7, 8, 2, 1, 10, 105]; 
+
+    arrStrings.sort(); //ABC sorrendbe rendezés
+    console.log(arrStrings);  
+
+    arrNumbers.sort();
+    console.log(arrNumbers);
+    arrNumbers.sort(AscNumbers);  //a függvényt nem meghívjuk, csak átadjuk, a sort meghívja
+    console.log(arrNumbers);
+    arrNumbers.sort(DescNumbers);
+    console.log(arrNumbers);
+    arrStrings.sort(DescStrings) 
+    console.log(arrStrings);
+    arrStrings.sort().reverse();  //sorrendezés visszafelé
+    console.log(arrStrings);
+    </script>
+</body>
+</html>

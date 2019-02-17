@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function koszonto(neve, kora, neme)
+        {
+            if(kora<18)
+            {
+                udvozlet='Szia '+neve;
+            }
+            else
+            {
+                if(neme=='fiú')
+                {
+                    udvozlet='Jó napot '+neve+' bácsi';
+                }
+                else
+                {
+                    udvozlet='Csókolom '+neve+' néni';
+                }
+            }
+            return udvozlet;
+        }
+        var ferfiKoszontese = koszonto ('Adam', 27, 'fiú');
+        if(ferfiKoszontese == 'Jó napot Adam bácsi')
+        {
+            console.log(ferfiKoszontese);
+        }
+        else{
+            console.error(ferfiKoszontese);
+        }
+        console.log(koszonto('Adam', 27, 'lány'));
+        console.log(koszonto('Adam', 17, 'fiú'));
+        console.log(koszonto('Adam', 17, 'lány'));
+    </script>
+</body>
+</html>

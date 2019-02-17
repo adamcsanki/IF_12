@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Diákigazolvány</title>
+	<style>
+		label {
+			padding: 5%;
+			width: 150px;
+		}
+		
+		input {			
+			margin: 10px;
+		}
+		
+		img {
+		float: right;
+		}
+		
+	
+	</style>
+	
+</head>
+
+<body>
+	<!-- http://www.gyumolcsfavasarlas.hu/wp-content/uploads/2017/02/00060-jonathan-alma-gyumolcsfavasarlas-250x.jpg  -->
+	<h2>Diákigazolvány</h2>
+	<img src="" alt="igazolványkép">
+	<label for="neve">Neve</label>
+	<input id="neve" type="text"><br>
+	<label for="eletkora">Életkora</label>
+	<input id="eletkora" type="number"><br>
+	<label for="fotoURL">Fotó URL</label>
+	<input id="fotoURL" type="text"><br>
+	<label for="SzemelyiSzamElsoKaraktere">Szemelyi szám első karaktere</label>
+	<input id="SzemelyiSzamElsoKaraktere" type="text"><br>
+	<label for="gender">Gender</label>
+	<input id="gender" type="text" disabled="true"><br>
+	
+	<script type="text/javascript" src="tanulo.js"></script>
+	<script type="text/javascript">
+	'use strict';
+	window.addEventListener('load', Window_Load_Handler, false);
+
+	var nodeFotoURLTextBox;
+	var nodeSzemelyiSzamElsoKaraktereTextBox;
+	var objTanulo;
+
+	function Window_Load_Handler ()
+		{
+			console.log('Indul a mókázás');
+			/* var objTanulo = new Diak('imi', 49, 'URL', 1);
+			console.log(objTanulo);
+			console.log(objTanulo.getGender()); */
+			nodeFotoURLTextBox = document.querySelector('#fotoURL');
+			nodeSzemelyiSzamElsoKaraktereTextBox = document.querySelector('#SzemelyiSzamElsoKaraktere');
+			nodeFotoURLTextBox.addEventListener('change', FotoURL_Change_Handler, false);
+			nodeSzemelyiSzamElsoKaraktereTextBox.addEventListener('change', SzemelyiSzam_Change_Handler, false);
+		}
+	
+		function FotoURL_Change_Handler()
+		{
+			console.log('a fotó URL-je megváltozott');
+			var nodeURL = event.target;
+			var nodeIMG = document.querySelectorAll('IMG')[0];
+
+			nodeIMG.setAttribute('src', nodeURL.value);
+ 
+		}
+
+		function SzemelyiSzam_Change_Handler()
+		{
+			console.log('a személyi szám megváltozott');
+			console.warn(event); 
+			var nodeSzemelyiSzamInput = event.target; //target az input szövegdoboz  //target megmondja, hogy ki üzent
+			console.log(nodeSzemelyiSzamInput.value instanceof Number); // a value mindig stringként tér vissza
+			var szemelyiSzam = parseInt (nodeSzemelyiSzamInput.value);
+			console.log(typeof (szemelyiSzam));
+			console.log(szemelyiSzam);
+			console.log(isNaN(szemelyiSzam));  //visszatérési értékről megmutatja, hogy szám-e
+			var objTanulo = new Diak('imi', 49, 'URL', szemelyiSzam);
+			var nodeGenderTextBox = document.querySelector('#gender');
+			nodeGenderTextBox.value = objTanulo.getGender();
+			console.warn(objTanulo);
+		}
+		
+	</script>
+
+</body>
+
+</html>

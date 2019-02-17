@@ -1,0 +1,9 @@
+table {
+    background-color: lime;
+}
+tbody tr:nth-child(2n+0) {
+    background-color: rgb(255, 255, 255);
+}
+tbody tr:nth-child(2n+1) {
+    background-color: orange;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Array metódusok</title>
+</head>
+<body>
+    <h2>array metódusok</h2>
+    <script type="text/javascript">
+        'use strict';
+        var arrSzamok = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+        console.log(arrSzamok.indexOf(3));  //megmutatja, hogy a tömbben hányas indexű a keresett elem
+        console.log(arrSzamok.indexOf(0));
+        arrSzamok.push(10); //új objektumot rak a tömb végére
+        console.log(arrSzamok);
+        arrSzamok.unshift(0); //a tömb elejére szúrja be a megadott objektumot
+        console.log(arrSzamok);
+        arrSzamok.pop(); //az utolsó paramétert kiveszi a tömbből
+        console.log(arrSzamok);
+        arrSzamok.shift(); //az első paramétert kiveszi a tömbből
+        console.log(arrSzamok);
+        arrSzamok.splice(4, 3); //valahányadik indexű elemtől kezdve valahány darab elemet kivesz a tömbből
+        console.log(arrSzamok);
+        
+        var arr2 = [];
+        for (var i=100; i<120; i++)
+        {
+            if(i%2===1)
+            {
+                arr2.push(i);
+            }
+        }
+        console.log(arr2);
+        var arrResult = arrSzamok.concat(arr2); //tömbök összevonása 3. tömbbé
+        console.log(arrResult);
+    </script>
+</body>
+</html>

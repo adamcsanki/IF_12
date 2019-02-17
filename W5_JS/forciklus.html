@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>for ciklus</title>
+</head>
+<body>
+   <h2>for ciklus</h2> 
+   <script type="text/javascript">
+        var nyeroszamok = [2, 8, 46, 21, 90];
+        console.log(nyeroszamok[1]);
+
+        for(var i = 0; i<nyeroszamok.length; i++)
+        {
+            console.log((i+1) + '. nyerőszám = ' +  nyeroszamok[i]);
+        }
+
+        var lanyokKeresztNevei = ['Bogi', 'Oli', 'Alexa', 'Panni'];
+        console.log(lanyokKeresztNevei[2]);
+
+        for(var j = 0; j<lanyokKeresztNevei.length; j++)
+        {
+            console.log(lanyokKeresztNevei[j]);
+        }
+
+        var vegyesSalata = [12, true, 'Panni', new Date(), 3.14, 3/4];
+        for(var k=0; k<vegyesSalata.length; k+=2){
+        console.log(vegyesSalata[k]);
+        }
+
+        var tombAtombben =[
+            [1, 2, 3, 4, 5]
+            ,['Éva', 'Ádám', 'kígyó']
+        ];
+        for(var l=0; l<tombAtombben.length; l++)
+        {
+           // console.log(tombAtombben[l]);
+           // console.log(tombAtombben[1][0]);
+            if(l===1)
+            {
+                for(var p=0; p<tombAtombben[l].length; p++)
+                {
+                    console.warn(tombAtombben[l][p]);
+                }
+            }
+        }
+   </script>
+   <script type="text/javascript">
+        'use strict';
+        var a = 5;
+        var b = 3;
+        var T;
+
+        T = a * b;
+        console.log(T);
+   
+   </script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>autó típusok</title>
+</head>
+<body>
+    <h2>autók</h2>
+    <script type="text/javascript">
+        'use strict'
+        function Point3D (x, y, z)
+        {
+            this.x=x;
+            this.y=y;
+            this.z=z;
+        }
+        function Auto(markanev, tipusnev, loero, color)
+        {
+            //saját típuson belül 4 tulajdonságot definiálunk
+            this.markanev=markanev;
+            this.tipusnev=tipusnev;
+            this.teljesitmeny=loero;
+            this.szin=color;
+            this.aktualisPozicio= new Point3D(0, 0, 0); //mozgáshoz szükséges kezdőpont
+            this.Move = function (newPosition)  //autó mozgása
+            {
+                this.aktualisPozicio = newPosition;
+            }
+            
+        }
+        var imiAutoja = new Auto('Opel', 'Astra', 116, 'holdezüst');
+        var oliAutoja = new Auto('Ford', 'Mondeo', 200, 'piros');
+        var adamAutoja = new Auto('Volvo', 'C30', 120, 'narancssárga');
+        var bertiAutoja = new Auto('Trabant', 'kombi', 26, 'zöld');
+        var autok = [
+            imiAutoja,
+            oliAutoja,
+            adamAutoja,
+            bertiAutoja
+        ];
+        console.log(imiAutoja);
+        console.log(adamAutoja);
+        console.log(autok[0].markanev, autok[0].tipusnev, autok[0].szin, autok[0].teljesitmeny);
+
+        for(var i=0; i<autok.length; i++)
+        {
+            console.log(autok[i].markanev, autok[i].tipusnev, autok[i].szin, autok[i].teljesitmeny, autok[i].aktualisPozicio);
+        }
+        imiAutoja.Move(new Point3D(20, 0, 0));  //mozgatás után újra berakom a for ciklust és megkapom a mozgatás utáni értékeket
+        oliAutoja.Move(new Point3D(30, 40, 5));
+        for(var i=0; i<autok.length; i++)
+        {
+            console.log(autok[i].markanev, autok[i].tipusnev, autok[i].szin, autok[i].teljesitmeny, autok[i].aktualisPozicio.x, autok[i].aktualisPozicio.y, autok[i].aktualisPozicio.z);
+        }
+
+        //JSON
+        var p2;
+        var p1 = new Point3D(10, 20, 30);
+        var s = '';
+        console.log(p1);
+        console.log(s);
+        s = JSON.stringify(p1);  //az objektum JSON formátuma
+        console.log(s);
+        console.log(p2);
+        p2 = JSON.parse(s);
+        console.log(p2);
+
+    
+
+
+    </script>
+</body>
+</html>

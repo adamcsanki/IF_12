@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>téglalap rajzoló</title>
+</head>
+<body>
+    <h2>téglalap rajzoló</h2>
+    <script type="text/javascript">
+        'use strict';
+        function TeglalapRajzolo(rowCount, columnCount)
+        {
+
+        
+            var s = '';
+            for(var rowIndex=0; rowIndex<rowCount; rowIndex++)
+            { 
+                for(var columnIndex=0; columnIndex<columnCount; columnIndex++)
+                {
+                console.info(s);
+                s = s+ '*';
+                }
+            s = s +'\n';        // --> \\n esetén téglalap rajzolása helyett kiírja, hogy \n
+            }
+             return s;
+        }  
+        
+        console.log(TeglalapRajzolo(5, 12));
+        console.log(TeglalapRajzolo(2, 8));
+        console.log(TeglalapRajzolo(3, 5));
+        alert(TeglalapRajzolo(3,5));
+    </script>
+    
+</body>
+</html>

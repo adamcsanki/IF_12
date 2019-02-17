@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML űrlap alapismeretek</title>
+        <style>
+            legend {
+                border: 1px black solid;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>HTML űrlap alapismeretek</h2>
+        <form method="GET" action="cimzett.html"> <!-- formhoz: get, delete, put vagy post --><!-- method megmondja, hogy mit, az action pedig hogy hol-->
+            <label for="txtZIP">Irányítószám:</label><br>
+            <input id="txtZIP" name="ZIP" type="text" placeholder="2890" pattern="[1-9]\d\d\d" title="Az első karakter 1-9 között lehet"><br>
+            <label for="txtNev">Neved:</label><br>  <!-- nyomásérzékennyé teszi a Neved: szöveget is-->
+            <input id="txtNev" name="Nev" type="text" required placeholder="John Doe"><br>  <!-- id-vel összekapcsolom a labellel, txt textboxot jelöl-->
+            <label>Születési dátum:</label><br>
+            <input name="SzulDatum" type="date" value="1900-01-01"><br>
+            <label for="cmbVegzettseg">Legmagasabb iskolai végzettség</label><br>
+            <select id="cmbVegzettseg" name="Vegzettseg">
+                <option value="1">Alapfokú</option>  <!-- value az elküldeni kíván adatot jelenti, az Alapfokú azt, amit a felhasználó lát -->
+                <option value="2">Középfokú</option>
+                <option value="3">Felsőfokú</option>
+            </select><br><br>
+            <fieldset>
+            <legend>Neme:</legend><br>
+            <input id="rFiu" name="r1" type="radio" value="1"><label for="rFiu">Fiú</label><br>  <!-- Ha minden néz azonos, csak egy opciót lehet választani.-->
+            <input id="rLany" name="r1" type="radio" value="2"><label for="rLany">Lány</label> <br>
+            <input id="rEgyeb" name="r1" type="radio" value="0"><label for="rEgyeb">Egyéb</label> <br>
+            </fieldset>
+            <input name="c1" type="checkbox"><label>Igen, kérek hírlevelet</label><br>
+            <input name="c2" type="checkbox"><label>Igen, hozzájárulok</label><br>
+            <label>Megjegyzések</label><br>
+            <textarea name="megjegyzes" rows="6" cols="40"></textarea><br>
+            <label></label>Autóim <br>
+            <select name="Autoim" size="8" multiple="true">
+                <optgroup label="Német autók">
+                    <option>Audi</option>
+                    <option>BMW</option>
+                    <option>Porsche</option>
+                </optgroup>
+                <optgroup label="Olasz autók">
+                    <option>Alfa Romeo</option>
+                    <option>FIAT</option>
+                    <option>Ferrari</option>
+                </optgroup>
+
+
+            </select><br>
+            <input name="onarckep" type="file"><br>
+            <input name="valami" type="hidden" value="Valami">
+            <input type="reset" value="Mégsem">
+            <input type="submit" value="OK"> 
+        </form>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>autó típusok</title>
+</head>
+<body>
+    <h2>autók</h2>
+    <script type="text/javascript">
+        'use strict'
+        function Auto()
+        {
+            //saját típuson belül 4 tulajdonságot definiálunk
+            this.markanev='OPEL';
+            this.tipusnev='ASTRA';
+            this.teljesitmeny='116';
+            this.szin='holdezüst';
+        }
+        var imiAutoja = new Auto();
+        var oliAutoja = new Auto();
+        oliAutoja.szin = 'Pink';
+        var adamAutoja = new Auto();
+        var bertiAutoja = new Auto();
+        var autok = [
+            imiAutoja,
+            oliAutoja,
+            adamAutoja,
+            bertiAutoja
+        ];
+
+        for(var i=0; i<autok.length; i++)
+        {
+            console.log(autok[i].szin);
+        }
+    </script>
+</body>
+</html>

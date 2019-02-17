@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>HTML űrlap középkezdő</title>
+	<!--<style>
+	legend {
+		border: 1px red solid;
+		padding: 5px;	
+	}
+	</style>-->
+
+</head>
+
+<body>
+
+	<h2>HTML űrlap középkezdő</h2>
+	<form>
+		Neved: <input type="text" readonly="true" value="XY" /><br /> <!-- csak olvasható, readonly paraméter-->
+		Életkorod: <input type="text" disabled="true" value="30" /><br /><br /> <!-- fókusz is le van tiltva-->
+
+		<input type="checkbox" checked="true" disabled="true">Feliratkozom a hírlevélre<br />
+
+		<fieldset>
+			<input type="radio" name="r1"><br />
+			<input type="radio" name="r1" checked="true"><br /> <!-- csak egynek legyen checked beállítva!-->
+		</fieldset><br />
+
+		<select>
+			<option disabled="true" selected="true" value="0">Válassz egy autómárkát</option>
+			<optgroup label="Német autók">
+				<option>Audi</option>
+				<option disabled="true">Opel</option>
+				<option>Porsche</option>
+			</optgroup>
+
+			<optgroup label="Olasz autók">
+				<option>Alfa Romeo</option>
+				<option>Ferrari</option> <!-- csak egynek legyen selected beállítva!-->
+				<option>Fiat</option>
+			</optgroup>
+		</select></br></br>
+
+		<button type="reset">
+			<img src="../images/alma.jpg" width="200px"><br />
+			Hello world!
+		</button>
+
+	</form>
+
+</body>
+
+</html>

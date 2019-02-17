@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Regisztráció</title>
+</head>
+<body>
+    <h2>Regisztráció</h2>
+    <nav>
+        <a href="utmutato.html" target="blank">Kitöltési útmutató</a>
+    </nav>
+    <form>
+        <h3>Alapadatok</h3>
+        <label for="userName">Felhasználónév*</label><br>
+        <input type="text" name="userName" id="userName" required><br>
+        <label for="userEmail">E-mail cím*</label><br>
+        <input type="email" name="userEmail" id="userEmail" required><br>
+        <label for="userPassword">Jelszó*</label><br>
+        <input type="password" name="password" id="userPassword" required minlength="8" maxlength="16"><br>
+        <label for="vezNev">Vezetéknév*</label><br>
+        <input type="text" name="vezNev" id="vezNev" required><br>
+        <label for="kerNev">Keresztnév*</label><br>
+        <input type="text" name="kerNev" id="kerNev" required><br>
+        <label for="szulNev">Születési név</label><br>
+        <input type="text" name="szulNev" id="szulNev"><br>
+        <label for="userDoB">Születési dátum*</label><br>
+        <input type="date" name="DoB" id="userDoB" required><br><br>
+        <label>Neme:</label><br>
+        <input type="radio" name="userGender" value="g1" checked>Férfi
+        <input type="radio" name="userGender" value="g2">Nő
+        <input type="radio" name="userGender" value="g3">Egyéb <br><br>
+        <label for="userSchool">Legmagasabb iskolai végzettség:</label><br>
+        <select name="userSchool" id="userSchool"><br>
+            <option value="1">Alapfok</option>
+            <option value="2">Középfok</option>
+            <option value="3">Felsőfok</option>
+        </select><br><br>
+        <label for="userPosition">Legutóbbi munkahelyi pozíciód</label><br>
+        <input type="radio" name="userPosition" value="p1" checked>Tanuló
+        <input type="radio" name="userPosition" value="p2">Beosztott
+        <input type="radio" name="userPosition" value="p3">Vezető/tulajdonos
+
+        <h3>Mik azok a témák, amik felkeltik az érdeklődésed? (többet is megjelölhetsz)</h3><br>
+       
+        <input type="checkbox" name="cb1" id="cb1"><label for="cb1">külföldi utazás</label><br>
+        <input type="checkbox" name="cb2" id="cb2"><label for="cb2">belföldi utazás</label><br>
+        <input type="checkbox" name="cb3" id="cb3"><label for="cb3">karrier, állásajánlatok</label><br>
+        <input type="checkbox" name="cb4" id="cb4"><label for="cb4">főzés, receptek</label><br>
+        <input type="checkbox" name="cb5" id="cb5"><label for="cb5">egészség, életmód, welness</label><br>
+        <input type="checkbox" name="cb6" id="cb6"><label for="cb6">lakás, otthon, ingatlan</label><br>
+        <input type="checkbox" name="cb7" id="cb7"><label for="cb7">pénz, befektetés</label><br>
+        <input type="checkbox" name="cb8" id="cb8"><label for="cb8">szerencsejáték, online fogadás</label><br>
+        <input type="checkbox" name="cb9" id="cb9"><label for="cb9">mozi. filmek</label><br>
+        <input type="checkbox" name="cb10" id="cb10"><label for="cb10">zene, koncert</label><br>
+        <input type="checkbox" name="cb11" id="cb11"><label for="cb11">sport, fitness</label><br>
+        <input type="checkbox" name="cb12" id="cb12"><label for="cb12">ezotéria, horoszkóp</label><br>
+        <input type="checkbox" name="cb13" id="cb13"><label for="cb13">autók, autós tesztek</label><br>
+        <input type="checkbox" name="cb14" id="cb14"><label for="cb14">környezetvédelem</label><br>
+        <input type="checkbox" name="cb15" id="cb15"><label for="cb15">számítógépes játékok, szórakoztató elektronika</label><br>
+        <input type="checkbox" name="cb16" id="cb16"><label for="cb16">informatika, számítástechnika</label><br>
+        <input type="checkbox" name="cb17" id="cb17"><label for="cb17">csalás, gyereknevelés</label><br>
+        <input type="checkbox" name="cb18" id="cb18"><label for="cb18">kisállatok</label><br>
+        <input type="checkbox" name="cb19" id="cb19"><label for="cb19">divat, szépségápolás</label><br>
+        <br>
+        <br>
+        <br>
+        <input type="checkbox"  id="tos" name="tos" required>
+        <label for="tos">A felhasználási feltételeket elfogadom.</label><br>
+        <input type="checkbox" id="business" name="business" checked>
+        <label for="business">Hozzájárulok ahhoz, hogy az általam megadott elektronikus elérhetőségeimen az oldal üzemeltetője közvetlen üzletszerzési célból megkeressen saját vagy üzleti partnerei ajánlataival.</label><br>
+    
+        <input type="checkbox" id="newsletter" name="nl" checked>
+        <label for="newsletter">Szeretnék feliratkozni a hírlevélre.</label><br>
+
+        <input type="submit" value="Regisztrálok">
+        
+
+
+
+    </form>
+    
+</body>
+</html>

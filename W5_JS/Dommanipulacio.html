@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+        .PirosDoboz {
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="pnlElso">
+        <span class="PirosDoboz">Alfa</span>
+        <span class="PirosDoboz">Beta</span>
+        <span>Gamma</span>
+    </div>
+    <div id=pnlMasodik>Hello world!</div>
+   
+    <script type="text/javascript">
+        'use strict';
+        window.addEventListener('load', Window_Load_Handler,false);
+        function Window_Load_Handler()
+        {
+            console.log('Kezdődhet a mulatság');
+            //nodegetterFuggvenyek();
+            //nodeQueryFuggvenyek();
+            nodeModification();
+            nodeCreation();
+            nodeDeletion();
+        }
+
+        function nodeDeletion ()
+        {
+            var nodeElsoDiv = document.querySelector('#pnlElso');
+            var nodeBetaSpan = nodeElsoDiv.querySelector('span:nth-child(2)');
+            nodeElsoDiv.removeChild(nodeBetaSpan);
+        }
+
+        function nodeCreation()
+        {
+            var nodeElsoDiv = document.querySelectorAll('div')[0];
+            var nodeDeltaSpan = document.createElement('span');
+            nodeDeltaSpan.innerText = 'Delta';
+            nodeDeltaSpan.setAttribute('class', 'PirosDoboz');
+            nodeDeltaSpan.setAttribute('style', 'padding: 5px');
+            nodeElsoDiv.appendChild(nodeDeltaSpan);
+        }
+
+        function nodeQueryFuggvenyek()
+        {
+            var nodeElsoPanel = document.querySelector('#pnlElso');
+            console.log(nodeElsoPanel);
+            var nodeMasodikPanel = document.querySelector('#pnlMasodik');
+            console.log(nodeMasodikPanel);
+            var nodesPirosDoboz = document.querySelectorAll('.PirosDoboz');
+            console.log(nodesPirosDoboz);
+            console.log(nodesPirosDoboz[0]);
+            for (var i=0; i<nodesPirosDoboz.length; i++)
+            {
+                console.warn(nodesPirosDoboz[i]);
+                console.warn(nodesPirosDoboz[i].innerText);
+                console.warn(nodesPirosDoboz[i].getAttribute('class'));
+                console.warn(nodesPirosDoboz[i].className);
+            }
+            var spanNodes = document.querySelectorAll('span');
+            for (var i = 0; i<spanNodes.length; i++)
+            {
+                console.warn(spanNodes[i]);
+                console.warn(spanNodes[i].innerText);
+            }
+            
+        }
+
+        function nodeModification()
+        {
+            var nodeAlfaSpan = document.querySelector('span:nth-child(1)');
+            console.log(nodeAlfaSpan);
+            nodeAlfaSpan.innerText = 'almafa';
+            nodeAlfaSpan.setAttribute('class', '');
+            nodeAlfaSpan.innerHTML = '<b>alma</b>fa';
+        }
+
+        function nodegetterFuggvenyek()
+        {var nodeMasodikPanel = document.getElementById('pnlMasodik');
+            console.log(nodeMasodikPanel);
+            var nodeElsoPanel = document.getElementById('pnlElso');
+            console.log(nodeElsoPanel);
+            var nodesPirosDoboz = document.getElementsByClassName('PirosDoboz');
+            console.log(nodesPirosDoboz);
+            console.log(nodesPirosDoboz[0]);
+            for (var i=0; i<nodesPirosDoboz.length; i++)
+            {
+                console.warn(nodesPirosDoboz[i]);
+                console.warn(nodesPirosDoboz[i].innerText);
+                console.warn(nodesPirosDoboz[i].getAttribute('class'));
+                console.warn(nodesPirosDoboz[i].className);
+            }
+        }
+    </script>
+</body>
+</html>

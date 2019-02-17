@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>HTML űrlap alapismeretek</title>
+	<link rel="stylesheet" type="text/css" href="../design/main.css">
+	<link rel="stylesheet" type="text/css" href="../design/urlapos.css">
+
+</head>
+
+<body>
+	<nav>
+		<a href="html-1.html">html-1</a
+		><a href="../kedd/cimsorok.html">címsorok</a
+		><a href="../kedd/listak.html">listák</a
+		><a href="../kedd/self-closing-elements.html">self-closing elements</a
+		><a href="urlapos.html">urlapos</a
+		><a href="../kedd/tablazatos.html">táblázatos</a>
+	</nav>
+
+	<h2>HTML űrlap alapismeretek</h2>
+	<form method="GET"> <!--action="cimzett.html"-->>
+	
+		<label for="txtZIP">Irányítószám:</label><br /> <!-- A label "for" paramétere a hozzá tartozó id alapján azonosított input mező fókuszát terjeszti ki a label szövegére-->
+		<input id="txtZIP" name="ZIP" type="text" placeholder="4026" pattern="[1-9]\d\d\d" title="Első karakter 0-9 között"/><br />
+	
+		<label for="txtNev">Neved:</label><br />  <!-- label: nyitó és záró tag-->
+		<input id="txtNev" name="nev" type="text" placeholder="Kovács Pista" required /><br />
+		
+		<label>Születési dátum:</label><br /> 
+		<input name="szuldatum" type="date" value="1979-09-06"/><br />
+		
+		<label for="txtEmail">E-mail cím:</label><br /> 
+		<input id="txtEmail" name="email" type="email" placeholder="kiss.jozsef@gmailcom"/><br />
+		
+		<label for="txtJelszo">Jelszó:</label><br /> 
+		<input id="txtJelszo" name="jelszo" type="password"/><br />
+		
+		<label for="cmbVegzettseg">Legmagasabb iskolai végzettség:</label><br />
+		<select id="cmbVegzettseg" name="maxvegzettseg">
+			<option value="1">Alapfokú</option>
+			<option value="2">Középfokú</option>
+			<option value="3">Felsőfokú</option>
+		
+		</select><br />
+		
+		<fieldset>
+		<legend>Neme:</legend> <!-- fieldset első gyereke-->
+		<input name="neme" type="radio" value="1"/>Fiú<br />
+		<input id="rlany" name="neme" type="radio" value="2"/><label for="rlany">Lány</label><br />
+		<input name="neme" type="radio" value="0"/>Egyéb<br />
+		</fieldset>
+		
+		
+		<input id="txtHirlev" type="checkbox" name="c1"><label for="txtHirlev">Igen, kérek hírlevelet...</label><br />
+		<input id="txtHozzajarul" type="checkbox" name="c2"><label for="txtHozzajarul">Igen, hozzájárulok...</label><br />
+		
+		<label>Megjegyzések:</label><br />
+		<textarea name="megjegyzes" rows="6" cols="40"></textarea><br />
+		
+		<label >Autóim:</label><br />
+		<select name="autoim" size="9" multiple>
+			<optgroup label="Német autók">		<!-- félkövér, nem lehet ráklikkelni -- plusz info-->			
+				<option>Audi</option>
+				<option>BMW</option>
+				<option>Porsche</option>
+			</optgroup>
+			
+			<optgroup label="Olasz autók">					
+				<option>Alfa Romeo</option>
+				<option>Ferrari</option>
+				<option>FIAT</option>
+				<option>Lancia</option>
+			</optgroup>
+		
+		
+		</select><br />
+		
+		<input name="onarckep" type="file" /><br />
+		<input name="valami" type="hidden" value="valami" />
+						
+		<input type="reset" value="Mégsem"/>
+		<input type="submit" value="OK"/>
+		<button type="reset">Mégsem</button>
+		<button type="submit">Elküld</button>
+	
+	
+	</form>
+	<p>&nbsp;</p>
+		<input type="button" value="1">
+		<input type="button" value="2">
+		<input type="button" value="3">
+		<input type="button" value="4">
+	
+</body>
+
+</html>
